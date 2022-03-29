@@ -1,0 +1,134 @@
+{% extends "index.htm" %}
+{% block titulo %}
+  EMPLEADOS
+{% endblock %}
+{% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/form.css' %}" />
+{% endblock %}
+{% block contenido %}
+  <section class="form-container">
+    <div class="form-header">
+      <h2>Formulario de Empleados</h2>
+    </div>
+    <form id="form-cargo" class="form">
+      <div class="form-group">
+          <label for="descipción">Nombre:
+              <input type="text"
+              name="descripción"
+              id="descipción"
+              placeholder="Ingrese el Nombre"
+              value=""
+              required/>
+          </label>
+          <label for="descipción">Cédula:
+            <input type="text"
+            name="descripción"
+            id="descipción"
+            placeholder="Ingrese el Numero de cédula"
+            value=""
+            required/>
+          </label>
+          <label for="descipción">Sueldo:
+          <input type="text"
+          name="descripción"
+          id="descipción"
+          placeholder="$"
+          value=""
+          required/>
+        </label>
+        <label for="descipción">Cargo:</label>
+        <select>
+          <option>-------</option>
+          <option>cargo 1</option>
+          <option>cargo 2</option>
+          <option>cargo 3</option>
+          <option>cargo 4</option>
+        </select>
+        <label for="descipción">Departamento:
+          <select>
+            <option>--------------</option>
+            <option>Departamento 1</option>
+            <option>Departamento 2</option>
+            <option>Departamento 3</option>
+            <option>Departamento 4</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-check">
+          <label>Activo
+              <input type="checkbox" id="activo" checked>
+          </label>
+      </div>
+      <button id="enviar" type="submit" name="enviar">
+          Guardar
+      </button>
+    </form>
+    <div class="consulta none table-responsive" id="consulta">
+        <h2>Listado de empleado </h2>
+        <table class="consulta-est" id="consult-est" border="1">
+            <thead>
+                <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Cédula</th>
+                <th>Sueldo</th>
+                <th>Cargo</th>
+                <th>Departamento</th>
+                <th>Activo</th>
+                </tr>
+            </thead>
+            <tbody class="detalle-est" id="destale-est">
+                <tr>
+                    <td>1</td>
+                    <td>Bryan Flor</td>
+                    <td>0954760401</td>
+                    <td>$ 2,000</td>
+                    <td>Jefe</td>
+                    <td>Informatica</td>
+                    <td>
+                        <button>✏️</button>
+                        <button>❌</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jenniffer Freire</td>
+                    <td>0923704332</td>
+                    <td>$ 1,000</td>
+                    <td>Cordinador</td>
+                    <td>Administrativo</td>
+                    <td>
+                        <button>✏️</button>
+                        <button>❌</button>
+                    </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Dalí Alcívar</td>
+                  <td>0923704332</td>
+                  <td>$ 1,100</td>
+                  <td>Técnico de selección</td>
+                  <td>Recursos Humanos</td>
+                  <td>
+                      <button>✏️</button>
+                      <button>❌</button>
+                  </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Floritza Carrasco</td>
+                <td>0923704332</td>
+                <td>$ 700</td>
+                <td>Secretaria</td>
+                <td>Contabilidad</td>
+                <td>
+                    <button>✏️</button>
+                    <button>❌</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+  </section>
+{% endblock %}

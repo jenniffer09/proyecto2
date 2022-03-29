@@ -1,0 +1,113 @@
+{% extends "index.htm" %}
+{% block titulo %}
+  DEPARTAMENTOS
+{% endblock %}
+{% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/form.css' %}" />
+{% endblock %}
+{% block contenido %}
+      <section>
+        <section class="form-container">
+          <div class="form-header">
+          <h2>Formulario de Departamentos</h2>
+          </div>
+          <form id="form-cargo" class="form">
+            <div class="form-group">
+                <label for="descipción">Departamento:
+                    <input type="text"
+                    name="descripción"
+                    id="descipción"
+                    placeholder="Ingrese el Departamento"
+                    value=""
+                    required/>
+                </label>
+                <label for="descipción">Nombre:
+                  <input type="text"
+                  name="descripción"
+                  id="descipción"
+                  placeholder="Ingrese el Encargado de Departamento"
+                  value=""
+                  required/>
+              </label>
+              <label for="descipción">Cédula:
+                <input type="text"
+                name="descripción"
+                id="descipción"
+                placeholder="Ingrese el numero de cédula"
+                value=""
+                required/>
+            </label>
+            </div>
+            <div class="form-check">
+                <label>Activo
+                    <input type="checkbox" id="activo" checked>
+                </label>
+            </div>
+            <button id="enviar" type="submit" name="enviar">
+                Guardar
+            </button>
+        </form>
+        <div class="consulta none table-responsive" id="consulta">
+            <h2>Listado de Departamentos</h2>
+            <table class="consulta-est" id="consult-est" border="1">
+                <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>Departamentos</th>
+                    <th>Nombre</th>
+                    <th>Cédula</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="detalle-est" id="destale-est">
+                    <tr>
+                        <td>1</td>
+                        <td>Informatica</td>
+                        <td>Bryan Flor</td>
+                        <td>0954760401</td>
+                        <td>Activo</td>
+                        <td>
+                            <button>✏️</button>
+                            <button>❌</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Administrativo</td>
+                        <td>Jenniffer Freire</td>
+                        <td>0923704332</td>
+                        <td>Activo</td>
+                        <td>
+                            <button>✏️</button>
+                            <button>❌</button>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Recursos Humanos</td>
+                      <td>Dalí Alcívar</td>
+                      <td>0989663362</td>
+                      <td>Activo</td>
+                      <td>
+                          <button>✏️</button>
+                          <button>❌</button>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Contabilidad</td>
+                    <td>Flortiza Carrasco</td>
+                    <td>0928068998</td>
+                    <td>Activo</td>
+                    <td>
+                        <button>✏️</button>
+                        <button>❌</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+      {% endblock %}

@@ -1,0 +1,46 @@
+:root {
+  --primary-color:#0f2a43  ;
+  --secundary-color: #9c000e; 
+  --boton-success:#81aaf0;
+  --boton-secundary:#7e7e7e;
+  --boton-warning:#241d9a;
+  --boton-cancelar:#ff4395;
+  --font-size:16px;
+  --font-color:#000;
+  --font-color-reverse:rgb(36, 34, 34);
+}
+
+html {
+  box-sizing: border-box; 
+  font-size: var(--font-size);
+  scroll-behavior: smooth; 
+  color:var(--font-color);
+}
+
+*,*:before,*:after{
+  box-sizing: inherit; 
+}
+
+body{
+  margin:0; 
+  overflow-x: hidden;
+} 
+
+main{
+  margin:0 10px;
+  margin-top: 70px;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style:none;
+}
+
